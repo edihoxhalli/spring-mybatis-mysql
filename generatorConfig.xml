@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+<classPathEntry location="C:/Users/Kachak/.m2/repository/mysql/mysql-connector-java-5.1.21.jar"/>
+  <context id="context1">
+    <jdbcConnection connectionURL="jdbc:mysql://localhost:3306/test?autoReconnect=true" driverClass="com.mysql.jdbc.Driver" userId="root" password="deval" />
+    <javaModelGenerator targetPackage="model" targetProject="SpringMVCHibernate/src/main/java" />
+    <sqlMapGenerator targetPackage="xml" targetProject="SpringMVCHibernate/src/main/java" />
+    <javaClientGenerator targetPackage="dao" targetProject="SpringMVCHibernate/src/main/java" type="XMLMAPPER" />
+    <!-- <javaClientGenerator targetPackage="dao" targetProject="SpringMVCHibernate\src" type="XMLMAPPER" /> -->
+    <table schema="test" tableName="directory_information" domainObjectName="DirectoryInformation">
+      <property name="useActualColumnNames" value="false"/>
+      <generatedKey column="DIRECTORY_INFORMATION_ID" sqlStatement="DB2" identity="true" />
+      <!-- <columnOverride column="DATE_FIELD" property="startDate" /> -->
+      <!-- <ignoreColumn column="FRED" />
+      <columnOverride column="LONG_VARCHAR_FIELD" jdbcType="VARCHAR" /> -->
+    </table>
+  </context>
+</generatorConfiguration>
